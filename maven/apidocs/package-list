@@ -1,0 +1,9 @@
+com.googlecode.t7mp
+com.googlecode.t7mp.scanner
+com.googlecode.t7mp.steps
+com.googlecode.t7mp.steps.deployment
+com.googlecode.t7mp.steps.directory
+com.googlecode.t7mp.steps.external
+com.googlecode.t7mp.steps.resources
+com.googlecode.t7mp.steps.tomcat
+com.googlecode.t7mp.util
