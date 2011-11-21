@@ -1,13 +1,84 @@
----
-layout: default
-title: t7mp project site
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>t7mp - A Tomcat 7 Maven Plugin</title>
+    <meta name="description" content="">
+    <meta name="author" content="Joerg Bellmann">
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">t7mp</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+			<li><a target="_blank" href="https://github.com/t7mp/t7mp">Fork us</a></li>
+			<li><a target="_blank" href="/docu/html/index.html">Documentation</a></li>
+			<li><a target="_blank" href="https://groups.google.com/forum/?hl=de#!forum/t7mp">Discussion</a></li>
+            <li><a href="thanks.html">Thanks</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+		<p>
+          <h1>maven-t7-plugin</h1>
+		</p>
+        <p>It's so easy to run Tomcat 7 (or 6 if you want) in your Maven project. Just add corresponding <em>groupdId</em>, <em>artifactId</em> and <em>version</em> to your pom.xml and start your build as usual with the following goal: <em>mvn t7:run</em>.</p>
+		<p>That's it.</p>
+        <p><a class="btn primary large" target="_blank" href="/docu/html/index.html">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span-one-third">
+          <h2>Feature-Request?</h2>
+          <p>You tried <em>maven-t7-plugin</em> but missed something? Or you think it would be cool <em>maven-t7-plugin</em> could provide feature X for you and many other developers around the world.</p>
+          <p><a class="btn" target="_blank" href="https://groups.google.com/forum/?hl=de#!forum/t7mp">Discuss your request &raquo;</a></p>
+        </div>
+        <div class="span-one-third">
+          <h2>We want you!</h2>
+           <p>Whenever you think you can do something to improve this project, the code, the tests, the documentation, the design or the authors english, don't hesitate, create an issue.</p>
+          <p><a class="btn" target="_blank" href="https://github.com/t7mp/t7mp/issues/new">Create Issue &raquo;</a></p>
+       </div>
+        <div class="span-one-third">
+          <h2>We thank ...</h2>
+          <p>... all the amazing companies supporting open source software development with their platforms, tools or ide's. </p>
+          <p><a class="btn" target="_blank" href="thanks.html">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; t7mp 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
