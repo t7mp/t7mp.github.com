@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 
-  <body>
+  <body onload="prettyPrint()">
 
     <div class="topbar">
       <div class="fill">
@@ -50,7 +50,13 @@
 		<p>
           <h1>maven-t7-plugin</h1>
 		</p>
-        <p>It's so easy to run Tomcat 7 (or 6 if you want) in your Maven project. Just add corresponding <em>groupdId</em>, <em>artifactId</em> and <em>version</em> to your pom.xml and start your build as usual with the following goal: <em>mvn t7:run</em>.</p>
+        <p>It's so easy to run Tomcat 7 (or 6 if you want) in your Maven project. Just add corresponding <em>groupdId</em>, <em>artifactId</em> and <em>version</em> to your pom.xml.</p>
+<pre>&lt;plugin&gt;
+    &lt;groupId>com.googlecode.t7mp&lt;/groupId&gt;
+    &lt;artifactId>maven-t7-plugin&lt;/artifactId&gt;
+    &lt;version>0.9.9-SNAPSHOT&lt;/version&gt;
+&lt;/plugin&gt;</pre>
+		<p>Start your build as usual with the following goal:<br/><pre><em>mvn t7:run</em></pre></p>
 		<p>That's it.</p>
         <p><a class="btn primary large" target="_blank" href="/docu/html/index.html">Learn more &raquo;</a></p>
       </div>
