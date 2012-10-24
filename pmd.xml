@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.3" timestamp="2012-08-06T21:50:35.242">
+<pmd version="4.3" timestamp="2012-10-24T22:20:53.639">
+<file name="/Users/jbellmann/dev/work/privat/t7mp/maven-t7-plugin/src/main/java/com/googlecode/t7mp/InstanceConfigurationUtil.java">
+<violation beginline="41" endline="41" begincolumn="32" endcolumn="71" rule="IntegerInstantiation" ruleset="Migration Rules" package="com.googlecode.t7mp" class="InstanceConfigurationUtil" method="validatePorts" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="2">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="44" endline="44" begincolumn="27" endcolumn="66" rule="IntegerInstantiation" ruleset="Migration Rules" package="com.googlecode.t7mp" class="InstanceConfigurationUtil" method="validatePorts" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="2">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="47" endline="47" begincolumn="32" endcolumn="75" rule="IntegerInstantiation" ruleset="Migration Rules" package="com.googlecode.t7mp" class="InstanceConfigurationUtil" method="validatePorts" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="2">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+<violation beginline="50" endline="50" begincolumn="27" endcolumn="70" rule="IntegerInstantiation" ruleset="Migration Rules" package="com.googlecode.t7mp" class="InstanceConfigurationUtil" method="validatePorts" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#IntegerInstantiation" priority="2">
+Avoid instantiating Integer objects. Call Integer.valueOf() instead.
+</violation>
+</file>
 <file name="/Users/jbellmann/dev/work/privat/t7mp/maven-t7-plugin/src/main/java/com/googlecode/t7mp/configuration/ChainedArtifactResolver.java">
 <violation beginline="47" endline="48" begincolumn="15" endcolumn="13" rule="EmptyCatchBlock" ruleset="Basic Rules" package="com.googlecode.t7mp.configuration" class="ChainedArtifactResolver" method="resolveArtifact" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#EmptyCatchBlock" priority="3">
 Avoid empty catch blocks

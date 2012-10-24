@@ -44,29 +44,32 @@
 <a class="jxr_linenumber" name="34" href="#34">34</a>      @Test
 <a class="jxr_linenumber" name="35" href="#35">35</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTomcatSetupSequence(){
 <a class="jxr_linenumber" name="36" href="#36">36</a>          <a href="../../../../com/googlecode/t7mp/steps/TomcatSetupSequenceTest.html">TestTomcatSetupSequence</a> sequence = <strong class="jxr_keyword">new</strong> <a href="../../../../com/googlecode/t7mp/steps/TomcatSetupSequenceTest.html">TestTomcatSetupSequence</a>();
-<a class="jxr_linenumber" name="37" href="#37">37</a>          Assert.assertEquals(<span class="jxr_string">"6 Steps expected"</span>, 6, sequence.getSteps().size());
+<a class="jxr_linenumber" name="37" href="#37">37</a>          Assert.assertEquals(<span class="jxr_string">"7 Steps expected"</span>, 7, sequence.getSteps().size());
 <a class="jxr_linenumber" name="38" href="#38">38</a>          Step three = sequence.getSteps().get(0);
 <a class="jxr_linenumber" name="39" href="#39">39</a>          Assert.assertTrue(three instanceof ResolveTomcatStep);
-<a class="jxr_linenumber" name="40" href="#40">40</a>          Step four = sequence.getSteps().get(1);
-<a class="jxr_linenumber" name="41" href="#41">41</a>          Assert.assertTrue(four instanceof CopyConfigResourcesFromClasspathSequence);
-<a class="jxr_linenumber" name="42" href="#42">42</a>          Step five = sequence.getSteps().get(2);
-<a class="jxr_linenumber" name="43" href="#43">43</a>          Assert.assertTrue(five instanceof ConfigFilesSequence);
-<a class="jxr_linenumber" name="44" href="#44">44</a>          Step six = sequence.getSteps().get(3);
-<a class="jxr_linenumber" name="45" href="#45">45</a>          Assert.assertTrue(six instanceof ArtifactDeploymentSequence);
-<a class="jxr_linenumber" name="46" href="#46">46</a>          Step seven = sequence.getSteps().get(4);
-<a class="jxr_linenumber" name="47" href="#47">47</a>          Assert.assertTrue(seven instanceof WebappSequence);
-<a class="jxr_linenumber" name="48" href="#48">48</a>          Step eight = sequence.getSteps().get(5);
-<a class="jxr_linenumber" name="49" href="#49">49</a>          Assert.assertTrue(eight instanceof SetSystemPropertiesStep);
-<a class="jxr_linenumber" name="50" href="#50">50</a>      }
-<a class="jxr_linenumber" name="51" href="#51">51</a>      
-<a class="jxr_linenumber" name="52" href="#52">52</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../com/googlecode/t7mp/steps/TomcatSetupSequenceTest.html">TestTomcatSetupSequence</a> <strong class="jxr_keyword">extends</strong> TomcatSetupSequence {
-<a class="jxr_linenumber" name="53" href="#53">53</a>  
-<a class="jxr_linenumber" name="54" href="#54">54</a>          <strong class="jxr_keyword">public</strong> List&lt;Step&gt; getSteps(){
-<a class="jxr_linenumber" name="55" href="#55">55</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">super</strong>.sequence;
-<a class="jxr_linenumber" name="56" href="#56">56</a>          }
-<a class="jxr_linenumber" name="57" href="#57">57</a>      }
-<a class="jxr_linenumber" name="58" href="#58">58</a>  
-<a class="jxr_linenumber" name="59" href="#59">59</a>  }
+<a class="jxr_linenumber" name="40" href="#40">40</a>          Step afterThree = sequence.getSteps().get(1);
+<a class="jxr_linenumber" name="41" href="#41">41</a>          Assert.assertTrue(afterThree instanceof DeleteDocsAndExamplesStep);
+<a class="jxr_linenumber" name="42" href="#42">42</a>          
+<a class="jxr_linenumber" name="43" href="#43">43</a>          Step four = sequence.getSteps().get(2);
+<a class="jxr_linenumber" name="44" href="#44">44</a>          Assert.assertTrue(four instanceof CopyConfigResourcesFromClasspathSequence);
+<a class="jxr_linenumber" name="45" href="#45">45</a>          Step five = sequence.getSteps().get(3);
+<a class="jxr_linenumber" name="46" href="#46">46</a>          Assert.assertTrue(five instanceof ConfigFilesSequence);
+<a class="jxr_linenumber" name="47" href="#47">47</a>          Step six = sequence.getSteps().get(4);
+<a class="jxr_linenumber" name="48" href="#48">48</a>          Assert.assertTrue(six instanceof ArtifactDeploymentSequence);
+<a class="jxr_linenumber" name="49" href="#49">49</a>          Step seven = sequence.getSteps().get(5);
+<a class="jxr_linenumber" name="50" href="#50">50</a>          Assert.assertTrue(seven instanceof WebappSequence);
+<a class="jxr_linenumber" name="51" href="#51">51</a>          Step eight = sequence.getSteps().get(6);
+<a class="jxr_linenumber" name="52" href="#52">52</a>          Assert.assertTrue(eight instanceof SetSystemPropertiesStep);
+<a class="jxr_linenumber" name="53" href="#53">53</a>      }
+<a class="jxr_linenumber" name="54" href="#54">54</a>      
+<a class="jxr_linenumber" name="55" href="#55">55</a>      <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../com/googlecode/t7mp/steps/TomcatSetupSequenceTest.html">TestTomcatSetupSequence</a> <strong class="jxr_keyword">extends</strong> TomcatSetupSequence {
+<a class="jxr_linenumber" name="56" href="#56">56</a>  
+<a class="jxr_linenumber" name="57" href="#57">57</a>          <strong class="jxr_keyword">public</strong> List&lt;Step&gt; getSteps(){
+<a class="jxr_linenumber" name="58" href="#58">58</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">super</strong>.sequence;
+<a class="jxr_linenumber" name="59" href="#59">59</a>          }
+<a class="jxr_linenumber" name="60" href="#60">60</a>      }
+<a class="jxr_linenumber" name="61" href="#61">61</a>  
+<a class="jxr_linenumber" name="62" href="#62">62</a>  }
 </pre>
 <hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
 </html>
